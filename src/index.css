@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  color: #222522;
+  background: #f5f3ee;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+:root[data-theme='dark'] {
+  color: #f4f1e9;
+  background: #171a18;
+}
+
+* { box-sizing: border-box; }
+html { min-width: 320px; background: var(--paper, #f5f3ee); }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--paper, #f5f3ee); color: var(--ink, #222522); }
+button, input { font: inherit; }
+button { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, input:focus-visible { outline: 2px solid #e85d45; outline-offset: 3px; }
+::selection { color: #fffdf8; background: #e85d45; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
