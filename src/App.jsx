@@ -341,7 +341,7 @@ function App() {
     <main className={`app-shell ${isFullscreen ? 'is-fullscreen' : ''}`}>
       <div className="app-frame">
         {!isFullscreen && <header className="app-header">
-          <div><p className="eyebrow">A little chance</p><h1>The Wheel of Fortune</h1></div>
+          <div><p className="eyebrow">by dachi shengelia</p><h1>The Wheel of Fortune</h1></div>
           <button type="button" className="theme-toggle icon-button" onClick={() => setTheme((current) => current === 'light' ? 'dark' : 'light')} aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`} title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} theme`}><Icon name={theme === 'light' ? 'moon' : 'sun'} /></button>
         </header>}
 
@@ -366,7 +366,7 @@ function App() {
           </section>
 
           {!isFullscreen && <aside className="options-panel" aria-labelledby="options-title">
-            <div className="options-heading"><div><p className="section-label">The shortlist</p><h2 id="options-title">Your options</h2></div><span className="list-count">{options.length}</span></div>
+            <div className="options-heading"><div><p className="section-label"></p><h2 id="options-title">Your options</h2></div><span className="list-count">{options.length}</span></div>
             <form className="add-form" onSubmit={handleAddName}><label className="sr-only" htmlFor="add-option">Add an option</label><input id="add-option" type="text" value={inputValue} onChange={(event) => setInputValue(event.target.value)} placeholder="Add someone..." disabled={isSpinning} /><button type="submit" disabled={isSpinning}>Add</button></form>
             <div className="name-list">{options.length ? options.map((option, index) => <motion.div layout key={option.id} className="name-item detailed-item" initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, x: -8 }}>
               <span className="name-index">{String(index + 1).padStart(2, '0')}</span>
